@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
-public class Search {
+public class Search
+{
 
     // A. write a static method named linearSearch that returns the first index
     // a target int is found in an array of ints (both the target and int array
@@ -92,8 +93,15 @@ public class Search {
             }
         }
         return last;
+//        for (int index = list.length - 1; index >= 0; index --)
+//        {
+//            if (list[index] == target)
+//            {
+//                return index;
+//            }
+//        }
+//        return -1;
     }
-
 
 
 
@@ -101,8 +109,28 @@ public class Search {
     // accepts an array of ints and a target int, and the other that accepts an ArrayList
     // of Integers and a target int.  Each method should return the NUMBER OF TIMES
     // the target appears in the array/ArrayList.
-
-
-
-
+    public static int linearSearchCount(int[] list, int target)
+    {
+        int times = 0;
+        for (int num: list)
+        {
+            if (num == target)
+            {
+                times ++;
+            }
+        }
+        return times;
+    }
+    public static int linearSearchCount(ArrayList<Integer> list, int target)
+    {
+        int times = 0;
+        for (Integer num: list)
+        {
+            if (num == target)
+            {
+                times ++;
+            }
+        }
+        return times;
+    }
 }
